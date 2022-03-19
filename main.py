@@ -31,13 +31,13 @@ class PairsTrading(QCAlgorithm):
         self.generate_count = 0
         self.open_size = 2.32
         self.close_size = 0.5
-        self.stop_loss = 6
+        self.stop_loss = 20
         self.data_count = 0
 
     def Initialize(self):
         self.SetStartDate(2016,1,1)
         self.SetEndDate(2018,5,1)
-        self.SetCash(50000)
+        self.SetCash(100000)
 
         for i in range(len(self.symbols)):
             equity = self.AddEquity(self.symbols[i],Resolution.Minute).Symbol
